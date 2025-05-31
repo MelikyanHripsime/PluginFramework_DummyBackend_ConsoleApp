@@ -9,6 +9,7 @@ Console.WriteLine("Old Images");
 Console.WriteLine(image1.ToString());
 Console.WriteLine(image2.ToString());
 
+//dummy repo
 var imageRepo = new ImagesRepository(new List<Image> { image1, image2 });
 
 var dict = new Dictionary<Guid, List<Effect>>();
@@ -29,6 +30,8 @@ var request = new ApplyEffectsRequest() { ImagesWithRequestedEffects = dict, Ima
 
 var imageProcessor = new ApplyPluginsProcessor();
 
+//simulate backend call
+//If had a time in real life will send a request dto to controller and handle according to response code 
 imageProcessor.ProcessEffects(request);
 
 Console.WriteLine("New Images");

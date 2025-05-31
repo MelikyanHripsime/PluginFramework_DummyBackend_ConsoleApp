@@ -27,6 +27,7 @@ namespace PluginFramework_DummyBackend_ConsoleApp.Plugins
             {
                 foreach (var effect in imageInfo.Value)
                 {
+                    // In real implementation will do better way instead of this 
                     resizePlugin.ApplyEffectOnImagePlugin(imageInfo.Key, effect.ApplyEffect, applyEffectsRequest.ImagesRepository);
                     blurPlugin.ApplyEffectOnImagePlugin(imageInfo.Key, effect.ApplyEffect, applyEffectsRequest.ImagesRepository);
                     grayscalePlugin.ApplyEffectOnImagePlugin(imageInfo.Key, effect.ApplyEffect, applyEffectsRequest.ImagesRepository);
@@ -34,7 +35,7 @@ namespace PluginFramework_DummyBackend_ConsoleApp.Plugins
 
             }
 
-            // in real life will return ids and response code
+            // in real implementation will return ids and response code
             return new ApplyEffectsResponse() { };
         }
 

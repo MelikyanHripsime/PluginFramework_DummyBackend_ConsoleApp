@@ -37,7 +37,7 @@ namespace PluginFramework_DummyBackend_ConsoleApp.DummyRepository
             Images.Remove(image);
         }
 
-        //Simulating update to db will just remove old and add new
+        //Simulating update to db will just remove old and add new to simulate update process
         public void UpdateImage(Image newImage)
         {
            var old = Images.FirstOrDefault(_ => _.Id == newImage.Id);
